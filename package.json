@@ -12,7 +12,8 @@
     "fifo",
     "collection",
     "enqueue",
-    "dequeue"
+    "dequeue",
+    "iterable"
   ],
   "scripts": {
     "build:dist": "rimraf dist/* && copyfiles -u 1 src/**/*.d.ts dist && tsc",
