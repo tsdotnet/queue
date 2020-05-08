@@ -47,7 +47,7 @@ export default class Queue<T>
 	enqueue (value: T): this
 	{
 		this._enqueueInternal(value);
-		this._incrementVersion();
+		this.incrementVersion();
 		return this;
 	}
 
@@ -63,7 +63,7 @@ export default class Queue<T>
 		{
 			this._enqueueInternal(v);
 		}
-		this._incrementVersion();
+		this.incrementVersion();
 		return this;
 	}
 
@@ -104,7 +104,7 @@ export default class Queue<T>
 		const n = this._root.next;
 		if(this._dequeueInternal(n))
 		{
-			this._incrementVersion();
+			this.incrementVersion();
 			return n.value;
 		}
 		if(throwIfEmpty) throw new InvalidOperationException('Cannot dequeue an empty queue.');
@@ -121,7 +121,7 @@ export default class Queue<T>
 		if(!out) throw new ArgumentNullException('out');
 		const n = this._root.next;
 		if(!this._dequeueInternal(n)) return false;
-		this._incrementVersion();
+		this.incrementVersion();
 		out(n.value);
 		return true;
 	}
@@ -183,7 +183,7 @@ export default class Queue<T>
 			}
 		}
 
-		this._incrementVersion();
+		this.incrementVersion();
 
 		return result;
 	}

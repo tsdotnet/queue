@@ -34,7 +34,7 @@ export default class Queue extends IterableCollectionBase {
      */
     enqueue(value) {
         this._enqueueInternal(value);
-        this._incrementVersion();
+        this.incrementVersion();
         return this;
     }
     /**
@@ -48,7 +48,7 @@ export default class Queue extends IterableCollectionBase {
         for (const v of values) {
             this._enqueueInternal(v);
         }
-        this._incrementVersion();
+        this.incrementVersion();
         return this;
     }
     /**
@@ -62,7 +62,7 @@ export default class Queue extends IterableCollectionBase {
     dequeue(throwIfEmpty = false) {
         const n = this._root.next;
         if (this._dequeueInternal(n)) {
-            this._incrementVersion();
+            this.incrementVersion();
             return n.value;
         }
         if (throwIfEmpty)
@@ -80,7 +80,7 @@ export default class Queue extends IterableCollectionBase {
         const n = this._root.next;
         if (!this._dequeueInternal(n))
             return false;
-        this._incrementVersion();
+        this.incrementVersion();
         out(n.value);
         return true;
     }
@@ -114,7 +114,7 @@ export default class Queue extends IterableCollectionBase {
                 n = this._root.next;
             }
         }
-        this._incrementVersion();
+        this.incrementVersion();
         return result;
     }
     /**
