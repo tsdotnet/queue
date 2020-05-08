@@ -233,6 +233,7 @@ export default class Queue<T>
 		const newTail = {value: value};
 		const tail = this._tail;
 		if(tail) tail.next = newTail;
+		else this._root.next = newTail;
 		this._tail = newTail;
 		this._count++;
 	}

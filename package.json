@@ -4,10 +4,16 @@
   "description": "",
   "author": "electricessence",
   "license": "MIT",
-  "types": "dist/index.d.ts",
-  "main": "dist/index.js",
-  "module": "dist-esm/index.js",
-  "keywords": [],
+  "types": "dist/Queue.d.ts",
+  "main": "dist/Queue.js",
+  "module": "dist-esm/Queue.js",
+  "keywords": [
+    "queue",
+    "fifo",
+    "collection",
+    "enqueue",
+    "dequeue"
+  ],
   "scripts": {
     "build:dist": "rimraf dist/* && copyfiles -u 1 src/**/*.d.ts dist && tsc",
     "build:dist-esm": "rimraf dist-esm/* && tsc -p tsconfig.esm.json",

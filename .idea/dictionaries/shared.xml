@@ -2,6 +2,7 @@
   <dictionary name="shared">
     <words>
       <w>dequeued</w>
+      <w>dequeuing</w>
       <w>enumerables</w>
       <w>formattable</w>
       <w>nojekyll</w>
