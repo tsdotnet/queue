@@ -13,7 +13,7 @@ export default class Queue<T>
 	private _root: Node<T> = {};
 	private _tail?: ValueNode<T>;
 
-	constructor (initialEntries?: Iterable<T>)
+	constructor (initialEntries?: Iterable<T> | null)
 	{
 		super();
 		if(initialEntries) this.enqueueMultiple(initialEntries);

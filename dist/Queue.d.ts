@@ -6,7 +6,7 @@ import IterableCollectionBase from '@tsdotnet/collection-base/dist/IterableColle
 export default class Queue<T> extends IterableCollectionBase<T> {
     private _root;
     private _tail?;
-    constructor(initialEntries?: Iterable<T>);
+    constructor(initialEntries?: Iterable<T> | null);
     private _count;
     /**
      * The number of items currently in the queue.
