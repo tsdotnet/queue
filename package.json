@@ -55,7 +55,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "@tsdotnet/collection-base": "^1.0.7",
+    "@tsdotnet/collection-base": "^1.0.8",
     "@tsdotnet/exceptions": "^1.0.12"
   }
 }
