@@ -14,6 +14,11 @@ export default class Queue<T> extends IterableCollectionBase<T> {
      */
     get count(): number;
     /**
+     * Returns true if the queue is empty.
+     * @return {boolean}
+     */
+    get isEmpty(): boolean;
+    /**
      * Returns the number of items currently in the queue.
      * @returns {number}
      */

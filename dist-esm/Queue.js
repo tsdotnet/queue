@@ -21,6 +21,13 @@ export default class Queue extends IterableCollectionBase {
         return this._count;
     }
     /**
+     * Returns true if the queue is empty.
+     * @return {boolean}
+     */
+    get isEmpty() {
+        return this._count === 0;
+    }
+    /**
      * Returns the number of items currently in the queue.
      * @returns {number}
      */
@@ -100,7 +107,7 @@ export default class Queue extends IterableCollectionBase {
             return [];
         const result = [];
         if (isFinite(max)) {
-            while (max-- >= 0) {
+            while (0 <= --max) {
                 const n = this._root.next;
                 if (!this._dequeueInternal(n))
                     break;
@@ -165,7 +172,10 @@ export default class Queue extends IterableCollectionBase {
             n.next = undefined;
         else
             this._tail = undefined;
-        this._count--;
+        const count = this._count;
+        if (!count)
+            throw new Error('Dequeuing empty collection.');
+        this._count = count - 1;
         return true;
     }
 }
