@@ -17,13 +17,15 @@ describe('Queue', () => {
 		expect(() => {
 			for(const e of q)
 			{
-				q.enqueue(e);
+				q.enqueue(e); // note, this added an 'a' to end.
 			}
-		}).to.throw; // collection modified.
+		}).to.throw(); // collection modified.
 
 		result = q.dump(3).join('');
 		expect(result).equal('abc');
-		expect(q.dequeue()).equal('d');
+		expect(q.dequeue(), '.dequeue()').equal('d');
+		expect(q.isEmpty).to.be.false;
+		expect(q.dequeue(), '.dequeue()').equal('a');
 		expect(q.isEmpty).to.be.true;
 		expect(q.count).equal(0);
 		expect(q.clear()).equal(0);
@@ -43,7 +45,7 @@ describe('Queue', () => {
 		q.dispose();
 		expect(q.isEmpty).to.be.true;
 		expect(q.peek()).to.be.undefined;
-		expect(() => q.peek(true)).to.throw;
+		expect(() => q.peek(true)).to.throw();
 	});
 
 	it('should stop dequeuing', () => {
@@ -55,7 +57,7 @@ describe('Queue', () => {
 		}
 		expect(q.isEmpty).to.be.true;
 		expect(q.dequeue()).to.be.undefined;
-		expect(() => q.dequeue(true)).to.throw;
+		expect(() => q.dequeue(true)).to.throw();
 		q.enqueueThese('e', 'f');
 		expect(q.dequeue()).equal('e');
 		expect(q.tryDequeue(d => expect(d).equal('f'))).to.be.true;
