@@ -138,6 +138,7 @@ export default class Queue extends IterableCollectionBase {
                     const n = root.next;
                     if (!_._dequeueInternal(n))
                         break;
+                    _.incrementVersion();
                     yield n.value;
                 }
             }

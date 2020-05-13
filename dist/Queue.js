@@ -141,6 +141,7 @@ class Queue extends IterableCollectionBase_1.default {
                     const n = root.next;
                     if (!_._dequeueInternal(n))
                         break;
+                    _.incrementVersion();
                     yield n.value;
                 }
             }

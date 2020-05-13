@@ -213,6 +213,7 @@ export default class Queue<T>
 				{
 					const n = root.next;
 					if(!_._dequeueInternal(n)) break;
+					_.incrementVersion();
 					yield n.value;
 				}
 			}
