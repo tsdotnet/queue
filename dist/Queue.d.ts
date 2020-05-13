@@ -90,6 +90,11 @@ export default class Queue<T> extends IterableCollectionBase<T> {
      */
     dump(max?: number): T[];
     /**
+     * Produces an iterable that dequeues items when iterated.  Stops when empty.
+     * @return {Iterable}
+     */
+    consumer(): Iterable<T>;
+    /**
      * Clears the list.
      */
     clear(): number;

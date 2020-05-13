@@ -109,23 +109,42 @@ class Queue extends IterableCollectionBase_1.default {
         if (!this.count)
             return [];
         const result = [];
+        const root = this._root;
         if (isFinite(max)) {
             while (0 <= --max) {
-                const n = this._root.next;
+                const n = root.next;
                 if (!this._dequeueInternal(n))
                     break;
                 result.push(n.value);
             }
         }
         else {
-            let n = this._root.next;
+            let n = root.next;
             while (this._dequeueInternal(n)) {
                 result.push(n.value);
-                n = this._root.next;
+                n = root.next;
             }
         }
         this.incrementVersion();
         return result;
+    }
+    /**
+     * Produces an iterable that dequeues items when iterated.  Stops when empty.
+     * @return {Iterable}
+     */
+    consumer() {
+        // eslint-disable-next-line @typescript-eslint/no-this-alias
+        const _ = this, root = this._root;
+        return {
+            *[Symbol.iterator]() {
+                while (true) {
+                    const n = root.next;
+                    if (!_._dequeueInternal(n))
+                        break;
+                    yield n.value;
+                }
+            }
+        };
     }
     /**
      * Clears the list.

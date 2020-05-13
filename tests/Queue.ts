@@ -63,4 +63,16 @@ describe('Queue', () => {
 		q.recycle();
 		expect(q.isEmpty).to.be.true;
 	});
+
+	it('should consume as expected', () => {
+		const source = ['a', 'b', 'c', 'd'];
+		const q = new Queue<string>(source);
+		let i = 0;
+		for(const e of q.consumer())
+		{
+			expect(e).equal(source[i++]);
+			expect(q.count).equal(source.length - i);
+		}
+		expect(q.isEmpty).to.be.true;
+	});
 });
