@@ -59,7 +59,7 @@
     "typescript": "^3.9.2"
   },
   "dependencies": {
-    "@tsdotnet/collection-base": "^2.0.0",
+    "@tsdotnet/collection-base": "^2.0.1",
     "@tsdotnet/exceptions": "^1.0.15",
     "tslib": "^2.0.0"
   }
