@@ -5,8 +5,8 @@
 ![npm-publish](https://github.com/tsdotnet/queue/workflows/npm-publish/badge.svg)
 [![npm version](https://img.shields.io/npm/v/@tsdotnet/queue.svg?style=flat-square)](https://www.npmjs.com/package/@tsdotnet/queue)
 
-
+A simple and fast FIFO collection for enqueuing and dequeuing items.
 
 ## Docs
 
-[tsdotnet.github.io/queue](https://tsdotnet.github.io/queue/)
+[tsdotnet.github.io/queue](https://tsdotnet.github.io/queue/classes/_queue_.queue.html)

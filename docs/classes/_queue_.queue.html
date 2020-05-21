@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Queue | @tsdotnet/queue - v1.1.4</title>
-	<meta name="description" content="Documentation for @tsdotnet/queue - v1.1.4">
+	<title>Queue | @tsdotnet/queue - v1.1.5</title>
+	<meta name="description" content="Documentation for @tsdotnet/queue - v1.1.5">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@tsdotnet/queue - v1.1.4</a>
+					<a href="../index.html" class="title">@tsdotnet/queue - v1.1.5</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -77,7 +77,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">IterableCollectionBase</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
+						<a href="_queuebase_.queuebase.html" class="tsd-signature-type">QueueBase</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">Queue</span>
@@ -102,11 +102,21 @@
 								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="_queue_.queue.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section tsd-is-private-protected">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="_queue_.queue.html#_array" class="tsd-kind-icon">_array</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="_queue_.queue.html#_head" class="tsd-kind-icon">_head</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="_queue_.queue.html#_size" class="tsd-kind-icon">_size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="_queue_.queue.html#_tail" class="tsd-kind-icon">_tail</a></li>
+							</ul>
+						</section>
 						<section class="tsd-index-section ">
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_queue_.queue.html#count" class="tsd-kind-icon">count</a></li>
-								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_queue_.queue.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_queue_.queue.html#capacity" class="tsd-kind-icon">capacity</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="_queue_.queue.html#count" class="tsd-kind-icon">count</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="_queue_.queue.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="_queue_.queue.html#version" class="tsd-kind-icon">version</a></li>
 							</ul>
 						</section>
@@ -114,26 +124,31 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_queue_.queue.html#_symbol_iterator_" class="tsd-kind-icon">[<wbr>Symbol.iterator]</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="_queue_.queue.html#_dequeueinternal" class="tsd-kind-icon">_dequeue<wbr>Internal</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="_queue_.queue.html#_enqueueinternal" class="tsd-kind-icon">_enqueue<wbr>Internal</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="_queue_.queue.html#_getiterator" class="tsd-kind-icon">_get<wbr>Iterator</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="_queue_.queue.html#_peekinternal" class="tsd-kind-icon">_peek<wbr>Internal</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_queue_.queue.html#assertversion" class="tsd-kind-icon">assert<wbr>Version</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#clear" class="tsd-kind-icon">clear</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#consumer" class="tsd-kind-icon">consumer</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_queue_.queue.html#clear" class="tsd-kind-icon">clear</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_queue_.queue.html#consumer" class="tsd-kind-icon">consumer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_queue_.queue.html#copyto" class="tsd-kind-icon">copy<wbr>To</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#dequeue" class="tsd-kind-icon">dequeue</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#dispose" class="tsd-kind-icon">dispose</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#dump" class="tsd-kind-icon">dump</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#enqueue" class="tsd-kind-icon">enqueue</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#enqueuemultiple" class="tsd-kind-icon">enqueue<wbr>Multiple</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#enqueuethese" class="tsd-kind-icon">enqueue<wbr>These</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_queue_.queue.html#dequeue" class="tsd-kind-icon">dequeue</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_queue_.queue.html#dispose" class="tsd-kind-icon">dispose</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_queue_.queue.html#dump" class="tsd-kind-icon">dump</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_queue_.queue.html#enqueue" class="tsd-kind-icon">enqueue</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_queue_.queue.html#enqueuemultiple" class="tsd-kind-icon">enqueue<wbr>Multiple</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_queue_.queue.html#enqueuethese" class="tsd-kind-icon">enqueue<wbr>These</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_queue_.queue.html#filter" class="tsd-kind-icon">filter</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_queue_.queue.html#getcount" class="tsd-kind-icon">get<wbr>Count</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_queue_.queue.html#incrementversion" class="tsd-kind-icon">increment<wbr>Version</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite tsd-is-inherited"><a href="_queue_.queue.html#map" class="tsd-kind-icon">map</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#peek" class="tsd-kind-icon">peek</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#recycle" class="tsd-kind-icon">recycle</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_queue_.queue.html#peek" class="tsd-kind-icon">peek</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_queue_.queue.html#recycle" class="tsd-kind-icon">recycle</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_queue_.queue.html#reduce" class="tsd-kind-icon">reduce</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#setcapacity" class="tsd-kind-icon">set<wbr>Capacity</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_queue_.queue.html#toarray" class="tsd-kind-icon">to<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#trydequeue" class="tsd-kind-icon">try<wbr>Dequeue</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#trimexcess" class="tsd-kind-icon">trim<wbr>Excess</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_queue_.queue.html#trydequeue" class="tsd-kind-icon">try<wbr>Dequeue</a></li>
 							</ul>
 						</section>
 					</div>
@@ -145,20 +160,46 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Queue<span class="tsd-signature-symbol">(</span>initialEntries<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_queue_.queue.html" class="tsd-signature-type">Queue</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Queue<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_queue_.queue.html" class="tsd-signature-type">Queue</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Queue<span class="tsd-signature-symbol">(</span>capacity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_queue_.queue.html" class="tsd-signature-type">Queue</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Queue<span class="tsd-signature-symbol">(</span>initialEntries<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_queue_.queue.html" class="tsd-signature-type">Queue</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides IterableCollectionBase.__constructor</p>
+								<p>Overrides <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L14">src/Queue.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L22">src/Queue.ts:22</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_queue_.queue.html" class="tsd-signature-type">Queue</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#constructor">constructor</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L24">src/Queue.ts:24</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> initialEntries: <span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
+									<h5>capacity: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_queue_.queue.html" class="tsd-signature-type">Queue</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#constructor">constructor</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L26">src/Queue.ts:26</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> initialEntries: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_queue_.queue.html" class="tsd-signature-type">Queue</a></h4>
@@ -166,19 +207,80 @@
 					</ul>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="_array" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _array</h3>
+					<div class="tsd-signature tsd-kind-icon">_array<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L19">src/Queue.ts:19</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="_head" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _head</h3>
+					<div class="tsd-signature tsd-kind-icon">_head<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L20">src/Queue.ts:20</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="_size" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _size</h3>
+					<div class="tsd-signature tsd-kind-icon">_size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L22">src/Queue.ts:22</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="_tail" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _tail</h3>
+					<div class="tsd-signature tsd-kind-icon">_tail<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L21">src/Queue.ts:21</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Accessors</h2>
 				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
-					<a name="count" class="tsd-anchor"></a>
-					<h3>count</h3>
+					<a name="capacity" class="tsd-anchor"></a>
+					<h3>capacity</h3>
 					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> count<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> capacity<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L28">src/Queue.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L52">src/Queue.ts:52</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<a name="count" class="tsd-anchor"></a>
+					<h3>count</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> count<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#count">count</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/QueueBase.ts#L17">src/QueueBase.ts:17</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -190,17 +292,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
 					<a name="isempty" class="tsd-anchor"></a>
 					<h3>is<wbr>Empty</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> isEmpty<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#isempty">isEmpty</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L37">src/Queue.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/QueueBase.ts#L26">src/QueueBase.ts:26</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -221,7 +324,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="_queue_.queue.html">Queue</a>.<a href="_queue_.queue.html#version">version</a></p>
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#version">version</a></p>
 								<ul>
 									<li>Defined in node_modules/@tsdotnet/collection-base/dist/IterableCollectionBase.d.ts:20</li>
 								</ul>
@@ -247,13 +350,55 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="_queue_.queue.html">Queue</a>.<a href="_queue_.queue.html#_symbol_iterator_">[Symbol.iterator]</a></p>
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#_symbol_iterator_">[Symbol.iterator]</a></p>
 								<p>Overrides IterableBase.[Symbol.iterator]</p>
 								<ul>
 									<li>Defined in node_modules/@tsdotnet/collection-base/dist/IterableCollectionBase.d.ts:27</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Iterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+					<a name="_dequeueinternal" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _dequeue<wbr>Internal</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">_dequeue<wbr>Internal<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#_dequeueinternal">_dequeueInternal</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L203">src/Queue.ts:203</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+					<a name="_enqueueinternal" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _enqueue<wbr>Internal</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">_enqueue<wbr>Internal<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#_enqueueinternal">_enqueueInternal</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L182">src/Queue.ts:182</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>item: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -268,10 +413,28 @@
 							<aside class="tsd-sources">
 								<p>Overrides IterableBase._getIterator</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L251">src/Queue.ts:251</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L220">src/Queue.ts:220</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Iterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+					<a name="_peekinternal" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _peek<wbr>Internal</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">_peek<wbr>Internal<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#_peekinternal">_peekInternal</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L214">src/Queue.ts:214</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -284,7 +447,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="_queue_.queue.html">Queue</a>.<a href="_queue_.queue.html#assertversion">assertVersion</a></p>
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#assertversion">assertVersion</a></p>
 								<ul>
 									<li>Defined in node_modules/@tsdotnet/collection-base/dist/IterableCollectionBase.d.ts:26</li>
 								</ul>
@@ -304,39 +467,36 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="clear" class="tsd-anchor"></a>
 					<h3>clear</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">clear<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#clear">clear</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L226">src/Queue.ts:226</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L59">src/Queue.ts:59</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Clears the list.</p>
-								</div>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="consumer" class="tsd-anchor"></a>
 					<h3>consumer</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">consumer<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#consumer">consumer</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L205">src/Queue.ts:205</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/QueueBase.ts#L75">src/QueueBase.ts:75</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -357,7 +517,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="_queue_.queue.html">Queue</a>.<a href="_queue_.queue.html#copyto">copyTo</a></p>
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#copyto">copyTo</a></p>
 								<ul>
 									<li>Defined in node_modules/@tsdotnet/collection-base/dist/ReadOnlyIterableCollectionBase.d.ts:50</li>
 								</ul>
@@ -386,10 +546,10 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="dequeue" class="tsd-anchor"></a>
 					<h3>dequeue</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">dequeue<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 						<li class="tsd-signature tsd-kind-icon">dequeue<span class="tsd-signature-symbol">(</span>throwIfEmpty<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">never</span></li>
 						<li class="tsd-signature tsd-kind-icon">dequeue<span class="tsd-signature-symbol">(</span>throwIfEmpty<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">never</span></li>
@@ -397,8 +557,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#dequeue">dequeue</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L93">src/Queue.ts:93</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/QueueBase.ts#L94">src/QueueBase.ts:94</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -406,21 +567,31 @@
 									<p>Pulls an entry from the head of the queue and returns it.
 									Returns undefined if the queue is already empty.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>{InvalidOperationException} If the queue is already empty and throwIfEmpty is true.</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#dequeue">dequeue</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L101">src/Queue.ts:101</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/QueueBase.ts#L102">src/QueueBase.ts:102</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Pulls an entry from the head of the queue and returns it.
-										Returns undefined if the queue is already empty and throwIfEmpty is false.
-									Throws an InvalidOperationException if the queue is already empty and throwIfEmpty is true.</p>
+									Returns undefined if the queue is already empty and throwIfEmpty is false.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>{InvalidOperationException} If the queue is already empty and throwIfEmpty is true.</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -434,16 +605,21 @@
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#dequeue">dequeue</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L109">src/Queue.ts:109</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/QueueBase.ts#L110">src/QueueBase.ts:110</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Pulls an entry from the head of the queue and returns it.
-										Returns undefined if the queue is already empty and throwIfEmpty is false.
-									Throws an InvalidOperationException if the queue is already empty and throwIfEmpty is true.</p>
+									Returns undefined if the queue is already empty and throwIfEmpty is false.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>{InvalidOperationException} If the queue is already empty and throwIfEmpty is true.</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -457,17 +633,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="dispose" class="tsd-anchor"></a>
 					<h3>dispose</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#dispose">dispose</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L238">src/Queue.ts:238</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/QueueBase.ts#L192">src/QueueBase.ts:192</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -479,17 +656,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="dump" class="tsd-anchor"></a>
 					<h3>dump</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">dump<span class="tsd-signature-symbol">(</span>max<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#dump">dump</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L171">src/Queue.ts:171</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L76">src/Queue.ts:76</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -507,17 +685,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="enqueue" class="tsd-anchor"></a>
 					<h3>enqueue</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">enqueue<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#enqueue">enqueue</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L56">src/Queue.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/QueueBase.ts#L36">src/QueueBase.ts:36</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -535,17 +714,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="enqueuemultiple" class="tsd-anchor"></a>
 					<h3>enqueue<wbr>Multiple</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">enqueue<wbr>Multiple<span class="tsd-signature-symbol">(</span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#enqueuemultiple">enqueueMultiple</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L68">src/Queue.ts:68</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/QueueBase.ts#L48">src/QueueBase.ts:48</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -563,17 +743,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="enqueuethese" class="tsd-anchor"></a>
 					<h3>enqueue<wbr>These</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">enqueue<wbr>These<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#enqueuethese">enqueueThese</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L84">src/Queue.ts:84</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/QueueBase.ts#L66">src/QueueBase.ts:66</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -600,7 +781,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="_queue_.queue.html">Queue</a>.<a href="_queue_.queue.html#filter">filter</a></p>
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#filter">filter</a></p>
 								<ul>
 									<li>Defined in node_modules/@tsdotnet/collection-base/dist/ReadOnlyIterableCollectionBase.d.ts:21</li>
 								</ul>
@@ -629,16 +810,11 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides ReadOnlyIterableCollectionBase.getCount</p>
+								<p>Overrides <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#getcount">getCount</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L46">src/Queue.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L54">src/Queue.ts:54</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Returns the number of items currently in the queue.</p>
-								</div>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
@@ -652,7 +828,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="_queue_.queue.html">Queue</a>.<a href="_queue_.queue.html#incrementversion">incrementVersion</a></p>
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#incrementversion">incrementVersion</a></p>
 								<ul>
 									<li>Defined in node_modules/@tsdotnet/collection-base/dist/IterableCollectionBase.d.ts:33</li>
 								</ul>
@@ -677,7 +853,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="_queue_.queue.html">Queue</a>.<a href="_queue_.queue.html#map">map</a></p>
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#map">map</a></p>
 								<p>Overrides IterableBase.map</p>
 								<ul>
 									<li>Defined in node_modules/@tsdotnet/collection-base/dist/ReadOnlyIterableCollectionBase.d.ts:27</li>
@@ -704,10 +880,10 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="peek" class="tsd-anchor"></a>
 					<h3>peek</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">peek<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 						<li class="tsd-signature tsd-kind-icon">peek<span class="tsd-signature-symbol">(</span>throwIfEmpty<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">never</span></li>
 						<li class="tsd-signature tsd-kind-icon">peek<span class="tsd-signature-symbol">(</span>throwIfEmpty<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">never</span></li>
@@ -715,8 +891,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#peek">peek</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L142">src/Queue.ts:142</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/QueueBase.ts#L146">src/QueueBase.ts:146</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -724,21 +901,31 @@
 									<p>Returns the entry at the head of the queue.
 									Returns undefined if the queue is already empty.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>{InvalidOperationException} If the queue is already empty and throwIfEmpty is true.</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#peek">peek</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L150">src/Queue.ts:150</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/QueueBase.ts#L154">src/QueueBase.ts:154</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Returns the entry at the head of the queue.
-										Returns undefined if the queue is already empty and throwIfEmpty is false.
-									Throws an InvalidOperationException if the queue is already empty and throwIfEmpty is true.</p>
+									Returns undefined if the queue is already empty and throwIfEmpty is false.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>{InvalidOperationException} If the queue is already empty and throwIfEmpty is true.</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -752,16 +939,21 @@
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#peek">peek</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L158">src/Queue.ts:158</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/QueueBase.ts#L162">src/QueueBase.ts:162</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Returns the entry at the head of the queue.
-										Returns undefined if the queue is already empty and throwIfEmpty is false.
-									Throws an InvalidOperationException if the queue is already empty and throwIfEmpty is true.</p>
+									Returns undefined if the queue is already empty and throwIfEmpty is false.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>{InvalidOperationException} If the queue is already empty and throwIfEmpty is true.</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -775,17 +967,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="recycle" class="tsd-anchor"></a>
 					<h3>recycle</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">recycle<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#recycle">recycle</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L246">src/Queue.ts:246</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/QueueBase.ts#L200">src/QueueBase.ts:200</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -807,7 +1000,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="_queue_.queue.html">Queue</a>.<a href="_queue_.queue.html#reduce">reduce</a></p>
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#reduce">reduce</a></p>
 								<ul>
 									<li>Defined in node_modules/@tsdotnet/collection-base/dist/ReadOnlyIterableCollectionBase.d.ts:35</li>
 								</ul>
@@ -863,7 +1056,7 @@
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="_queue_.queue.html">Queue</a>.<a href="_queue_.queue.html#reduce">reduce</a></p>
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#reduce">reduce</a></p>
 								<ul>
 									<li>Defined in node_modules/@tsdotnet/collection-base/dist/ReadOnlyIterableCollectionBase.d.ts:43</li>
 								</ul>
@@ -920,6 +1113,29 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setcapacity" class="tsd-anchor"></a>
+					<h3>set<wbr>Capacity</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Capacity<span class="tsd-signature-symbol">(</span>capacity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L99">src/Queue.ts:99</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>capacity: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="toarray" class="tsd-anchor"></a>
 					<h3>to<wbr>Array</h3>
@@ -929,7 +1145,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="_queue_.queue.html">Queue</a>.<a href="_queue_.queue.html#toarray">toArray</a></p>
+								<p>Inherited from <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#toarray">toArray</a></p>
 								<ul>
 									<li>Defined in node_modules/@tsdotnet/collection-base/dist/ReadOnlyIterableCollectionBase.d.ts:55</li>
 								</ul>
@@ -944,16 +1160,47 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="trydequeue" class="tsd-anchor"></a>
-					<h3>try<wbr>Dequeue</h3>
+					<a name="trimexcess" class="tsd-anchor"></a>
+					<h3>trim<wbr>Excess</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">try<wbr>Dequeue<span class="tsd-signature-symbol">(</span>out<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>dequeued<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">trim<wbr>Excess<span class="tsd-signature-symbol">(</span>threshold<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/d984635/src/Queue.ts#L128">src/Queue.ts:128</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L174">src/Queue.ts:174</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Trims excess items in the underlying array.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> threshold: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="trydequeue" class="tsd-anchor"></a>
+					<h3>try<wbr>Dequeue</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">try<wbr>Dequeue<span class="tsd-signature-symbol">(</span>out<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_queuebase_.queuebase.html">QueueBase</a>.<a href="_queuebase_.queuebase.html#trydequeue">tryDequeue</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/tsdotnet/queue/blob/3d78bfa/src/Queue.ts#L153">src/Queue.ts:153</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -964,21 +1211,21 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>out: <span class="tsd-signature-symbol">(</span>dequeued<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<h5>out: <span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The &#39;out&#39; handler that receives the value if it exists.</p>
 									</div>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-signature">
 											<ul class="tsd-signatures tsd-kind-type-literal">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>dequeued<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 											</ul>
 											<ul class="tsd-descriptions">
 												<li class="tsd-description">
 													<h4 class="tsd-parameters-title">Parameters</h4>
 													<ul class="tsd-parameters">
 														<li>
-															<h5>dequeued: <span class="tsd-signature-type">T</span></h5>
+															<h5>value: <span class="tsd-signature-type">T</span></h5>
 														</li>
 													</ul>
 													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1001,8 +1248,14 @@
 					<li class="globals  ">
 						<a href="../index.html"><em>Globals</em></a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_linkqueue_.html">&quot;<wbr>Link<wbr>Queue&quot;</a>
+					</li>
 					<li class="current tsd-kind-module">
 						<a href="../modules/_queue_.html">&quot;<wbr>Queue&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_queuebase_.html">&quot;<wbr>Queue<wbr>Base&quot;</a>
 					</li>
 				</ul>
 			</nav>
@@ -1016,10 +1269,25 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_queue_.queue.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-								<a href="_queue_.queue.html#count" class="tsd-kind-icon">count</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="_queue_.queue.html#_array" class="tsd-kind-icon">_array</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="_queue_.queue.html#_head" class="tsd-kind-icon">_head</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="_queue_.queue.html#_size" class="tsd-kind-icon">_size</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="_queue_.queue.html#_tail" class="tsd-kind-icon">_tail</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="_queue_.queue.html#capacity" class="tsd-kind-icon">capacity</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="_queue_.queue.html#count" class="tsd-kind-icon">count</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
 								<a href="_queue_.queue.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
@@ -1029,36 +1297,45 @@
 								<a href="_queue_.queue.html#_symbol_iterator_" class="tsd-kind-icon">[<wbr>Symbol.iterator]</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+								<a href="_queue_.queue.html#_dequeueinternal" class="tsd-kind-icon">_dequeue<wbr>Internal</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+								<a href="_queue_.queue.html#_enqueueinternal" class="tsd-kind-icon">_enqueue<wbr>Internal</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
 								<a href="_queue_.queue.html#_getiterator" class="tsd-kind-icon">_get<wbr>Iterator</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+								<a href="_queue_.queue.html#_peekinternal" class="tsd-kind-icon">_peek<wbr>Internal</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_queue_.queue.html#assertversion" class="tsd-kind-icon">assert<wbr>Version</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_queue_.queue.html#clear" class="tsd-kind-icon">clear</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_queue_.queue.html#consumer" class="tsd-kind-icon">consumer</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 								<a href="_queue_.queue.html#copyto" class="tsd-kind-icon">copy<wbr>To</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_queue_.queue.html#dequeue" class="tsd-kind-icon">dequeue</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_queue_.queue.html#dispose" class="tsd-kind-icon">dispose</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_queue_.queue.html#dump" class="tsd-kind-icon">dump</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_queue_.queue.html#enqueue" class="tsd-kind-icon">enqueue</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_queue_.queue.html#enqueuemultiple" class="tsd-kind-icon">enqueue<wbr>Multiple</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_queue_.queue.html#enqueuethese" class="tsd-kind-icon">enqueue<wbr>These</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -1073,19 +1350,25 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite tsd-is-inherited">
 								<a href="_queue_.queue.html#map" class="tsd-kind-icon">map</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_queue_.queue.html#peek" class="tsd-kind-icon">peek</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_queue_.queue.html#recycle" class="tsd-kind-icon">recycle</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 								<a href="_queue_.queue.html#reduce" class="tsd-kind-icon">reduce</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_queue_.queue.html#setcapacity" class="tsd-kind-icon">set<wbr>Capacity</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_queue_.queue.html#toarray" class="tsd-kind-icon">to<wbr>Array</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_queue_.queue.html#trimexcess" class="tsd-kind-icon">trim<wbr>Excess</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_queue_.queue.html#trydequeue" class="tsd-kind-icon">try<wbr>Dequeue</a>
 							</li>
 						</ul>
@@ -1107,10 +1390,11 @@
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
 			</ul>
 		</div>
 	</div>

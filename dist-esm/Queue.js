@@ -1,80 +1,97 @@
-/*!
+/*
  * @author electricessence / https://github.com/electricessence/
- * Licensing: MIT
+ * @license MIT
+ * Based Upon: http://referencesource.microsoft.com/#System/CompMod/system/collections/generic/queue.cs
  */
-import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
-import InvalidOperationException from '@tsdotnet/exceptions/dist/InvalidOperationException';
-import IterableCollectionBase from '@tsdotnet/collection-base/dist/IterableCollectionBase';
-export default class Queue extends IterableCollectionBase {
+/* eslint-disable @typescript-eslint/no-this-alias */
+import QueueBase from './QueueBase';
+const MINIMUM_GROW = 4;
+const DEFAULT_CAPACITY = 4;
+const SHRINK_THRESHOLD = 42;
+export default class Queue extends QueueBase {
     constructor(initialEntries) {
         super();
-        this._root = {};
-        this._count = 0;
-        if (initialEntries)
-            this.enqueueMultiple(initialEntries);
+        this._head = 0; // First valid element in the queue
+        this._tail = 0; // Last valid element in the queue
+        this._size = 0; // Number of elements.
+        if (!initialEntries)
+            this._array = new Array(DEFAULT_CAPACITY);
+        else {
+            this._array = initialEntries.slice();
+            this._tail = this._size = this._array.length;
+        }
     }
-    /**
-     * The number of items currently in the queue.
-     * @returns {number}
-     */
-    get count() {
-        return this._count;
-    }
-    /**
-     * Returns true if the queue is empty.
-     * @return {boolean}
-     */
-    get isEmpty() {
-        return this._count === 0;
-    }
-    /**
-     * Returns the number of items currently in the queue.
-     * @returns {number}
-     */
     getCount() {
-        return this._count;
+        return this._size;
+    }
+    clear() {
+        const _ = this, size = _._size;
+        _._array.length = 0;
+        _._head = 0;
+        _._tail = 0;
+        _._size = 0;
+        _.incrementVersion();
+        return size;
     }
     /**
-     * Adds an item to the end of the queue.
-     * @param value
-     * @returns {this}
+     * Dequeues entries into an array.
      */
-    enqueue(value) {
-        this._enqueueInternal(value);
-        this.incrementVersion();
-        return this;
+    dump(max = Infinity) {
+        const _ = this;
+        const result = new Array(Math.min(max, _._size));
+        if (isFinite(max)) {
+            if (max !== 0) {
+                let i = 0;
+                while (max-- && _._size)
+                    result[i++] = _._dequeueInternal();
+            }
+        }
+        else {
+            while (_._size)
+                result.push(_._dequeueInternal());
+        }
+        _.incrementVersion();
+        return result;
     }
-    /**
-     * Adds items to the end of the queue.
-     * @param {Iterable} values
-     * @returns {this}
-     */
-    enqueueMultiple(values) {
-        if (!values)
+    setCapacity(capacity) {
+        if (isNaN(capacity))
             return this;
-        for (const v of values) {
-            this._enqueueInternal(v);
+        if (capacity < 0)
+            capacity = 0;
+        const _ = this;
+        const array = _._array, len = array.length;
+        if (capacity == len)
+            return this;
+        const head = _._head, tail = _._tail, size = _._size;
+        if (!size) {
+            array.length = capacity;
+            this._head = 0;
+            this._tail = 0;
+            return this;
         }
-        this.incrementVersion();
+        // Special case where we can simply extend or shrink the length of the array.
+        if (head < tail && capacity >= tail) {
+            array.length = capacity;
+            return this;
+        }
+        // We create a new array because modifying an existing one could be slow.
+        const newArray = new Array(capacity);
+        let i, n = 0;
+        if (head < tail) {
+            for (i = head; i < tail; i++)
+                newArray[n++] = array[i];
+        }
+        else {
+            for (i = head; i < len; i++)
+                newArray[n++] = array[i];
+            for (i = 0; i < tail; i++)
+                newArray[n++] = array[i];
+        }
+        this._array = newArray;
+        _._head = 0;
+        _._tail = (size == capacity) ? 0 : size;
+        _.incrementVersion();
         return this;
-    }
-    /**
-     * Adds items to the end of the queue.
-     * @param values
-     * @returns {this}
-     */
-    enqueueThese(...values) {
-        return this.enqueueMultiple(values);
-    }
-    dequeue(throwIfEmpty = false) {
-        const n = this._root.next;
-        if (this._dequeueInternal(n)) {
-            this.incrementVersion();
-            return n.value;
-        }
-        if (throwIfEmpty)
-            throw new InvalidOperationException('Cannot dequeue an empty queue.');
-        return undefined;
     }
     /**
      * Checks to see if the queue has entries an pulls an entry from the head of the queue and passes it to the out handler.
@@ -82,121 +99,63 @@ export default class Queue extends IterableCollectionBase {
      * @returns {boolean} True if a value was retrieved.  False if not.
      */
     tryDequeue(out) {
-        if (!out)
-            throw new ArgumentNullException('out');
-        const n = this._root.next;
-        if (!this._dequeueInternal(n))
-            return false;
-        this.incrementVersion();
-        out(n.value);
-        return true;
-    }
-    peek(throwIfEmpty = false) {
-        const n = this._root.next;
-        if (n)
-            return n.value;
-        if (throwIfEmpty)
-            throw new InvalidOperationException('Cannot call peek on an empty queue.');
-        return undefined;
-    }
-    /**
-     * Dequeues entries into an array.
-     */
-    dump(max = Infinity) {
-        if (!this.count)
-            return [];
-        const result = [];
-        const root = this._root;
-        if (isFinite(max)) {
-            while (0 <= --max) {
-                const n = root.next;
-                if (!this._dequeueInternal(n))
-                    break;
-                result.push(n.value);
-            }
+        const _ = this;
+        if (super.tryDequeue(out)) {
+            if (_._size < _._array.length / 2)
+                _.trimExcess(SHRINK_THRESHOLD);
+            _.incrementVersion();
+            return true;
         }
-        else {
-            let n = root.next;
-            while (this._dequeueInternal(n)) {
-                result.push(n.value);
-                n = root.next;
-            }
+        return false;
+    }
+    /**
+     * Trims excess items in the underlying array.
+     * @param {number} threshold
+     */
+    trimExcess(threshold) {
+        const _ = this;
+        const size = _._size;
+        if (size < Math.floor(_._array.length * 0.9) && (!threshold && threshold !== 0 || isNaN(threshold) || threshold < size))
+            _.setCapacity(size);
+    }
+    _enqueueInternal(item) {
+        const _ = this;
+        const size = _._size;
+        let len = _._array.length;
+        if (size === len) {
+            let newCapacity = len * 2;
+            if (newCapacity < len + MINIMUM_GROW)
+                newCapacity = len + MINIMUM_GROW;
+            _.setCapacity(newCapacity);
+            len = _._array.length;
         }
-        this.incrementVersion();
-        return result;
+        const tail = _._tail % len;
+        _._array[tail] = item;
+        _._tail = (tail + 1) % len;
+        _._size = size + 1;
     }
-    /**
-     * Produces an iterable that dequeues items when iterated.  Stops when empty.
-     * @return {Iterable}
-     */
-    consumer() {
-        // eslint-disable-next-line @typescript-eslint/no-this-alias
-        const _ = this, root = this._root;
-        return {
-            *[Symbol.iterator]() {
-                while (true) {
-                    const n = root.next;
-                    if (!_._dequeueInternal(n))
-                        break;
-                    _.incrementVersion();
-                    yield n.value;
-                }
-            }
-        };
+    _dequeueInternal() {
+        if (!this._size)
+            return undefined;
+        const array = this._array, head = this._head;
+        const removed = array[head];
+        array[head] = undefined; // protect the data.
+        this._head = (head + 1) % array.length;
+        this._size--;
+        return removed;
     }
-    /**
-     * Clears the list.
-     */
-    clear() {
-        const count = this._count;
-        this._root.next = undefined;
-        this._tail = undefined;
-        this._count = 0;
-        return count;
-    }
-    /**
-     * Clears the list.
-     */
-    dispose() {
-        this.clear();
-    }
-    /**
-     * Clears the list.
-     */
-    recycle() {
-        this.clear();
+    _peekInternal() {
+        const _ = this;
+        return _._size ? _._array[_._head] : undefined;
     }
     *_getIterator() {
-        let current, next = this._root.next;
-        while (next) {
-            current = next;
-            next = current.next;
-            yield current.value;
-        }
+        const _ = this, size = _._size;
+        for (let i = 0; i < size; i++)
+            yield _._getElement(i);
     }
-    _enqueueInternal(value) {
-        const newTail = { value: value };
-        const tail = this._tail;
-        if (tail)
-            tail.next = newTail;
-        else
-            this._root.next = newTail;
-        this._tail = newTail;
-        this._count++;
-    }
-    _dequeueInternal(n) {
-        if (!n)
-            return false;
-        this._root.next = n.next;
-        if (n.next)
-            n.next = undefined;
-        else
-            this._tail = undefined;
-        const count = this._count;
-        if (!count)
-            throw new Error('Dequeuing empty collection.');
-        this._count = count - 1;
-        return true;
+    _getElement(index) {
+        const _ = this, a = _._array;
+        return _._size ? a[(_._head + index) % a.length] : undefined;
     }
 }
 //# sourceMappingURL=Queue.js.map

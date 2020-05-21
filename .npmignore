@@ -3,6 +3,7 @@ node_modules
 bin
 obj
 *.user
+/archive
 /tests
 /spec
 /src
