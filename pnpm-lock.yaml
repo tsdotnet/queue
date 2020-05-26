@@ -1,5 +1,5 @@
 dependencies:
-  '@tsdotnet/collection-base': 2.0.5
+  '@tsdotnet/collection-base': 2.0.6
   '@tsdotnet/exceptions': 1.0.16
   tslib: 2.0.0
 devDependencies:
@@ -204,7 +204,7 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-tsAQNx32a8CoFhjhijUIhI4kccIAgmGhy8LZMZgGfmXcpMbPRUqn5LWmgRttILi6yeGmBJd2xsPkFMs0PzgPCw==
-  /@tsdotnet/collection-base/2.0.5:
+  /@tsdotnet/collection-base/2.0.6:
     dependencies:
       '@tsdotnet/common-interfaces': 1.0.4
       '@tsdotnet/compare': 1.3.13
@@ -212,7 +212,7 @@ packages:
       tslib: 2.0.0
     dev: false
     resolution:
-      integrity: sha512-FmuxSxQYZOrVc+QAksrMS/jiUP+kUOt3azaDT0cOsiuLvqe2VUozRC3TuYwd7wXfOcMbObtIKK4XDnP9Jd/kEw==
+      integrity: sha512-iSAPS8Wsk3/a11U2DX6iMuCCtB3IpfmFvoI3yjH7l7rDnqD0Liyq3bSSZNAqlqdvEulTi9yJFZjDX1THT//Vkw==
   /@tsdotnet/common-interfaces/1.0.4:
     dev: false
     resolution:
@@ -3047,7 +3047,7 @@ packages:
     resolution:
       integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==
 specifiers:
-  '@tsdotnet/collection-base': ^2.0.5
+  '@tsdotnet/collection-base': ^2.0.6
   '@tsdotnet/exceptions': ^1.0.16
   '@types/chai': ^4.2.11
   '@types/mocha': ^7.0.2
