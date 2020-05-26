@@ -103,7 +103,6 @@ export default class Queue extends QueueBase {
         if (super.tryDequeue(out)) {
             if (_._size < _._array.length / 2)
                 _.trimExcess(SHRINK_THRESHOLD);
-            _.incrementVersion();
             return true;
         }
         return false;

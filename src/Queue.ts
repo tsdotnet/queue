@@ -140,8 +140,6 @@ export default class Queue<T>
 		{
 			if(_._size<_._array.length/2)
 				_.trimExcess(SHRINK_THRESHOLD);
-
-			_.incrementVersion();
 			return true;
 		}
 		return false;
