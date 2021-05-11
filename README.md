@@ -9,4 +9,4 @@ A simple and fast FIFO collection for enqueuing and dequeuing items.
 
 ## Docs
 
-[tsdotnet.github.io/queue](https://tsdotnet.github.io/queue/classes/_queue_.queue.html)
+[tsdotnet.github.io/queue](https://tsdotnet.github.io/queue/classes/queue.default.html)
