@@ -5,7 +5,7 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const QueueBase_1 = tslib_1.__importDefault(require("./QueueBase"));
+const QueueBase_1 = (0, tslib_1.__importDefault)(require("./QueueBase"));
 /**
  * A `LinkQueue<T>` will have different performance characteristics than a Queue using an array as its storage.
  * Most cases will be served well by `Queue<T>`.
