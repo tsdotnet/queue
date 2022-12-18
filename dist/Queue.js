@@ -7,7 +7,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 /* eslint-disable @typescript-eslint/no-this-alias */
-const QueueBase_1 = (0, tslib_1.__importDefault)(require("./QueueBase"));
+const QueueBase_1 = tslib_1.__importDefault(require("./QueueBase"));
 const MINIMUM_GROW = 4;
 const DEFAULT_CAPACITY = 4;
 const SHRINK_THRESHOLD = 42;

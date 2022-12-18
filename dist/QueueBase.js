@@ -5,9 +5,9 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const IterableCollectionBase_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/collection-base/dist/IterableCollectionBase"));
-const InvalidOperationException_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/exceptions/dist/InvalidOperationException"));
-const ArgumentNullException_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/exceptions/dist/ArgumentNullException"));
+const IterableCollectionBase_1 = tslib_1.__importDefault(require("@tsdotnet/collection-base/dist/IterableCollectionBase"));
+const InvalidOperationException_1 = tslib_1.__importDefault(require("@tsdotnet/exceptions/dist/InvalidOperationException"));
+const ArgumentNullException_1 = tslib_1.__importDefault(require("@tsdotnet/exceptions/dist/ArgumentNullException"));
 class QueueBase extends IterableCollectionBase_1.default {
     /**
      * The number of items currently in the queue.
