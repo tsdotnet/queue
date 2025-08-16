@@ -13,11 +13,10 @@
       "types": "./dist/Queue.d.ts",
       "require": "./dist/cjs/Queue.js",
       "import": "./dist/esm/Queue.js",
+      "umd": "./dist/umd/Queue.js",
       "default": "./dist/cjs/Queue.js"
-    },
-    "./package.json": "./package.json"
+    }
   },
-  "sideEffects": false,
   "keywords": [
     "queue",
     "fifo",
