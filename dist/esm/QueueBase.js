@@ -2,9 +2,8 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import IterableCollectionBase from '@tsdotnet/collection-base/dist/IterableCollectionBase';
-import InvalidOperationException from '@tsdotnet/exceptions/dist/InvalidOperationException';
-import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
+import { IterableCollectionBase } from '@tsdotnet/collection-base';
+import { InvalidOperationException, ArgumentNullException } from '@tsdotnet/exceptions';
 export default class QueueBase extends IterableCollectionBase {
     /**
      * The number of items currently in the queue.

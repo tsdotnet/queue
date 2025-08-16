@@ -9,10 +9,11 @@ import QueueBase from './QueueBase';
  * `LinkQueue<T>` may outperform `Queue<T>` within a capacity range above 50 and below 50,000.
  */
 export default class LinkQueue extends QueueBase {
+    _root = {};
+    _tail;
+    _count = 0;
     constructor(initialEntries) {
         super();
-        this._root = {};
-        this._count = 0;
         if (initialEntries)
             this.enqueueMultiple(initialEntries);
     }
@@ -64,8 +65,7 @@ export default class LinkQueue extends QueueBase {
         return this._dequeueNodeInternal(n) ? n.value : undefined;
     }
     _peekInternal() {
-        var _a;
-        return (_a = this._root.next) === null || _a === void 0 ? void 0 : _a.value;
+        return this._root.next?.value;
     }
     *_getIterator() {
         let current, next = this._root.next;

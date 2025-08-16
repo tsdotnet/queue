@@ -3,9 +3,8 @@
  * @license MIT
  */
 
-import IterableCollectionBase from '@tsdotnet/collection-base/dist/IterableCollectionBase';
-import InvalidOperationException from '@tsdotnet/exceptions/dist/InvalidOperationException';
-import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
+import {IterableCollectionBase} from '@tsdotnet/collection-base';
+import {InvalidOperationException, ArgumentNullException} from '@tsdotnet/exceptions';
 
 export default abstract class QueueBase<T>
 	extends IterableCollectionBase<T>

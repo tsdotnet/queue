@@ -9,11 +9,12 @@ const MINIMUM_GROW = 4;
 const DEFAULT_CAPACITY = 4;
 const SHRINK_THRESHOLD = 42;
 export default class Queue extends QueueBase {
+    _array;
+    _head = 0; // First valid element in the queue
+    _tail = 0; // Last valid element in the queue
+    _size = 0; // Number of elements.
     constructor(initialEntries) {
         super();
-        this._head = 0; // First valid element in the queue
-        this._tail = 0; // Last valid element in the queue
-        this._size = 0; // Number of elements.
         if (!initialEntries)
             this._array = new Array(DEFAULT_CAPACITY);
         else {

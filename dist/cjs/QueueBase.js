@@ -4,11 +4,9 @@
  * @license MIT
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const tslib_1 = require("tslib");
-const IterableCollectionBase_1 = tslib_1.__importDefault(require("@tsdotnet/collection-base/dist/IterableCollectionBase"));
-const InvalidOperationException_1 = tslib_1.__importDefault(require("@tsdotnet/exceptions/dist/InvalidOperationException"));
-const ArgumentNullException_1 = tslib_1.__importDefault(require("@tsdotnet/exceptions/dist/ArgumentNullException"));
-class QueueBase extends IterableCollectionBase_1.default {
+const collection_base_1 = require("@tsdotnet/collection-base");
+const exceptions_1 = require("@tsdotnet/exceptions");
+class QueueBase extends collection_base_1.IterableCollectionBase {
     /**
      * The number of items currently in the queue.
      * @returns {number}
@@ -81,7 +79,7 @@ class QueueBase extends IterableCollectionBase_1.default {
      */
     dequeue(throwIfEmpty = false) {
         if (throwIfEmpty && this.isEmpty)
-            throw new InvalidOperationException_1.default('Cannot dequeue an empty queue.');
+            throw new exceptions_1.InvalidOperationException('Cannot dequeue an empty queue.');
         const item = this._dequeueInternal();
         this.incrementVersion();
         return item;
@@ -94,7 +92,7 @@ class QueueBase extends IterableCollectionBase_1.default {
      */
     tryDequeue(out) {
         if (!out)
-            throw new ArgumentNullException_1.default('out');
+            throw new exceptions_1.ArgumentNullException('out');
         if (this.isEmpty)
             return false;
         const item = this._dequeueInternal();
@@ -111,7 +109,7 @@ class QueueBase extends IterableCollectionBase_1.default {
      */
     peek(throwIfEmpty = false) {
         if (throwIfEmpty && this.isEmpty)
-            throw new InvalidOperationException_1.default('Cannot call peek on an empty queue.');
+            throw new exceptions_1.InvalidOperationException('Cannot call peek on an empty queue.');
         return this._peekInternal();
     }
     /**
