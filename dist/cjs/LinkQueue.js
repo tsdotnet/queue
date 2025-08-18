@@ -6,11 +6,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const QueueBase_1 = tslib_1.__importDefault(require("./QueueBase"));
-/**
- * A `LinkQueue<T>` will have different performance characteristics than a Queue using an array as its storage.
- * Most cases will be served well by `Queue<T>`.
- * `LinkQueue<T>` may outperform `Queue<T>` within a capacity range above 50 and below 50,000.
- */
 class LinkQueue extends QueueBase_1.default {
     constructor(initialEntries) {
         super();
@@ -19,16 +14,9 @@ class LinkQueue extends QueueBase_1.default {
         if (initialEntries)
             this.enqueueMultiple(initialEntries);
     }
-    /**
-     * Returns the number of items currently in the queue.
-     * @returns {number}
-     */
     getCount() {
         return this._count;
     }
-    /**
-     * Dequeues entries into an array.
-     */
     dump(max = Infinity) {
         if (!this.count)
             return [];
@@ -52,9 +40,6 @@ class LinkQueue extends QueueBase_1.default {
         this.incrementVersion();
         return result;
     }
-    /**
-     * Clears the list.
-     */
     clear() {
         const count = this._count;
         this._root.next = undefined;

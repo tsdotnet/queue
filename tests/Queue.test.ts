@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import { describe, it, expect } from 'vitest';
 import LinkQueue from '../src/LinkQueue';
 import QueueClassic from '../src/Queue';
 import ShiftyQueue from '../archive/ShiftyQueue';
@@ -77,7 +77,7 @@ function QueueTest<T> (
 		it('should add nodes as expected', () => {
 			const q = new Queue<string>(['a', 'b', 'c', 'd']);
 			expect(q.getCount()).equal(q.count);
-			expect(q.isEmpty).to.be.false;
+			expect(q.isEmpty).toBe(false);
 			expect(q.peek()).equal('a');
 			let result: string = '';
 			for(const e of q)
@@ -91,14 +91,14 @@ function QueueTest<T> (
 				{
 					q.enqueue(e); // note, this added an 'a' to end.
 				}
-			}).to.throw(); // collection modified.
+			}).toThrow(); // collection modified.
 
 			result = q.dump(3).join('');
 			expect(result).equal('abc');
 			expect(q.dequeue(), '.dequeue()').equal('d');
-			expect(q.isEmpty).to.be.false;
+			expect(q.isEmpty).toBe(false);
 			expect(q.dequeue(), '.dequeue()').equal('a');
-			expect(q.isEmpty).to.be.true;
+			expect(q.isEmpty).toBe(true);
 			expect(q.count).equal(0);
 			expect(q.clear()).equal(0);
 
@@ -113,11 +113,11 @@ function QueueTest<T> (
 			expect(result).equal('abcd');
 			expect(q.dump().join('')).equal('abcd');
 			q.enqueue('e');
-			expect(q.isEmpty).to.be.false;
+			expect(q.isEmpty).toBe(false);
 			q.dispose();
-			expect(q.isEmpty).to.be.true;
-			expect(q.peek()).to.be.undefined;
-			expect(() => q.peek(true)).to.throw();
+			expect(q.isEmpty).toBe(true);
+			expect(q.peek()).toBeUndefined();
+			expect(() => q.peek(true)).toThrow();
 		});
 
 		it('should stop dequeuing', () => {
@@ -127,15 +127,15 @@ function QueueTest<T> (
 			{
 				expect(q.dequeue()).equal(e);
 			}
-			expect(q.isEmpty).to.be.true;
-			expect(q.dequeue()).to.be.undefined;
-			expect(() => q.dequeue(true)).to.throw();
+			expect(q.isEmpty).toBe(true);
+			expect(q.dequeue()).toBeUndefined();
+			expect(() => q.dequeue(true)).toThrow();
 			q.enqueueThese('e', 'f');
 			expect(q.dequeue()).equal('e');
-			expect(q.tryDequeue(d => expect(d).equal('f'))).to.be.true;
-			expect(q.tryDequeue(() => { throw 'should not execute';})).to.be.false;
+			expect(q.tryDequeue(d => expect(d).equal('f'))).toBe(true);
+			expect(q.tryDequeue(() => { throw 'should not execute';})).toBe(false);
 			q.recycle();
-			expect(q.isEmpty).to.be.true;
+			expect(q.isEmpty).toBe(true);
 		});
 
 		it('should consume as expected', () => {
@@ -147,7 +147,7 @@ function QueueTest<T> (
 				expect(e).equal(source[i++]);
 				expect(q.count).equal(source.length - i);
 			}
-			expect(q.isEmpty).to.be.true;
+			expect(q.isEmpty).toBe(true);
 		});
 
 		if(!performanceTest) return;
@@ -198,7 +198,7 @@ function QueueTest<T> (
 				const elapsed = Date.now() - start;
 				console.log(elapsed);
 
-				expect(true).to.be.true;
+				expect(true).toBe(true);
 			});
 		}
 	});

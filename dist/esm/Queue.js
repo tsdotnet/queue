@@ -1,18 +1,13 @@
-/*
- * @author electricessence / https://github.com/electricessence/
- * @license MIT
- * Based Upon: http://referencesource.microsoft.com/#System/CompMod/system/collections/generic/queue.cs
- */
-/* eslint-disable @typescript-eslint/no-this-alias */
-import QueueBase from './QueueBase';
+import QueueBase from './QueueBase.js';
+
 const MINIMUM_GROW = 4;
 const DEFAULT_CAPACITY = 4;
 const SHRINK_THRESHOLD = 42;
-export default class Queue extends QueueBase {
+class Queue extends QueueBase {
     _array;
-    _head = 0; // First valid element in the queue
-    _tail = 0; // Last valid element in the queue
-    _size = 0; // Number of elements.
+    _head = 0;
+    _tail = 0;
+    _size = 0;
     constructor(initialEntries) {
         super();
         if (!initialEntries)
@@ -34,9 +29,6 @@ export default class Queue extends QueueBase {
         _.incrementVersion();
         return size;
     }
-    /**
-     * Dequeues entries into an array.
-     */
     dump(max = Infinity) {
         const _ = this;
         const result = new Array(Math.min(max, _._size));
@@ -70,12 +62,10 @@ export default class Queue extends QueueBase {
             this._tail = 0;
             return this;
         }
-        // Special case where we can simply extend or shrink the length of the array.
         if (head < tail && capacity >= tail) {
             array.length = capacity;
             return this;
         }
-        // We create a new array because modifying an existing one could be slow.
         const newArray = new Array(capacity);
         let i, n = 0;
         if (head < tail) {
@@ -94,11 +84,6 @@ export default class Queue extends QueueBase {
         _.incrementVersion();
         return this;
     }
-    /**
-     * Checks to see if the queue has entries an pulls an entry from the head of the queue and passes it to the out handler.
-     * @param out The 'out' handler that receives the value if it exists.
-     * @returns {boolean} True if a value was retrieved.  False if not.
-     */
     tryDequeue(out) {
         const _ = this;
         if (super.tryDequeue(out)) {
@@ -108,10 +93,6 @@ export default class Queue extends QueueBase {
         }
         return false;
     }
-    /**
-     * Trims excess items in the underlying array.
-     * @param {number} threshold
-     */
     trimExcess(threshold) {
         const _ = this;
         const size = _._size;
@@ -139,7 +120,7 @@ export default class Queue extends QueueBase {
             return undefined;
         const array = this._array, head = this._head;
         const removed = array[head];
-        array[head] = undefined; // protect the data.
+        array[head] = undefined;
         this._head = (head + 1) % array.length;
         this._size--;
         return removed;
@@ -158,4 +139,6 @@ export default class Queue extends QueueBase {
         return _._size ? a[(_._head + index) % a.length] : undefined;
     }
 }
+
+export { Queue as default };
 //# sourceMappingURL=Queue.js.map

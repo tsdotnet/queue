@@ -1,14 +1,10 @@
+import QueueBase from './QueueBase.js';
+
 /*!
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import QueueBase from './QueueBase';
-/**
- * A `LinkQueue<T>` will have different performance characteristics than a Queue using an array as its storage.
- * Most cases will be served well by `Queue<T>`.
- * `LinkQueue<T>` may outperform `Queue<T>` within a capacity range above 50 and below 50,000.
- */
-export default class LinkQueue extends QueueBase {
+class LinkQueue extends QueueBase {
     _root = {};
     _tail;
     _count = 0;
@@ -17,16 +13,9 @@ export default class LinkQueue extends QueueBase {
         if (initialEntries)
             this.enqueueMultiple(initialEntries);
     }
-    /**
-     * Returns the number of items currently in the queue.
-     * @returns {number}
-     */
     getCount() {
         return this._count;
     }
-    /**
-     * Dequeues entries into an array.
-     */
     dump(max = Infinity) {
         if (!this.count)
             return [];
@@ -50,9 +39,6 @@ export default class LinkQueue extends QueueBase {
         this.incrementVersion();
         return result;
     }
-    /**
-     * Clears the list.
-     */
     clear() {
         const count = this._count;
         this._root.next = undefined;
@@ -100,4 +86,6 @@ export default class LinkQueue extends QueueBase {
         return true;
     }
 }
+
+export { LinkQueue as default };
 //# sourceMappingURL=LinkQueue.js.map

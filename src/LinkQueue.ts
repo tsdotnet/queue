@@ -14,7 +14,7 @@ export default class LinkQueue<T>
 	extends QueueBase<T>
 {
 	private _root: Node<T> = {};
-	private _tail?: ValueNode<T>;
+	private _tail?: ValueNode<T> | undefined;
 	private _count: number = 0;
 
 	constructor (initialEntries?: Iterable<T> | null)
@@ -125,7 +125,7 @@ export default class LinkQueue<T>
 
 interface Node<T>
 {
-	next?: ValueNode<T>;
+	next?: ValueNode<T> | undefined;
 }
 
 interface ValueNode<T>

@@ -111,12 +111,12 @@ export default class Queue<T>
 		let i, n = 0;
 		if(head<tail)
 		{
-			for(i = head; i<tail; i++) newArray[n++] = array[i];
+			for(i = head; i<tail; i++) newArray[n++] = array[i]!;
 		}
 		else
 		{
-			for(i = head; i<len; i++) newArray[n++] = array[i];
-			for(i = 0; i<tail; i++) newArray[n++] = array[i];
+			for(i = head; i<len; i++) newArray[n++] = array[i]!;
+			for(i = 0; i<tail; i++) newArray[n++] = array[i]!;
 		}
 
 		this._array = newArray;
