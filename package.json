@@ -1,6 +1,6 @@
 {
   "name": "@tsdotnet/queue",
-  "version": "1.2.14",
+  "version": "1.2.15",
   "description": "A simple and fast FIFO collection for enqueuing and dequeuing items.",
   "author": "electricessence",
   "license": "MIT",
