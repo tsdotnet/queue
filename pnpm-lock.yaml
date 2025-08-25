@@ -25,8 +25,8 @@ importers:
   .:
     dependencies:
       '@tsdotnet/collection-base':
-        specifier: ^2.1.8
-        version: 2.1.8
+        specifier: ^2.1.9
+        version: 2.1.9
       '@tsdotnet/exceptions':
         specifier: ^1.2.5
         version: 1.2.5
@@ -501,8 +501,8 @@ packages:
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==}
     engines: {node: '>=18'}
 
-  '@tsdotnet/collection-base@2.1.8':
-    resolution: {integrity: sha512-SjzBZMQyJnJXgdR2/m91C9k1cRVhOwEryezbCTgO7Whxi0WAfqMkL6zHqRrQnercHeLoU2a+N10NQvHjluW5aA==}
+  '@tsdotnet/collection-base@2.1.9':
+    resolution: {integrity: sha512-Pr0IEgiW4+dW4sWRfzcuOzYc7MysYjfzBtCWrNtv5WiCTeaVSij1OEH3KSQr7ZipCwnKIMARpqBk2ag0Niylrw==}
 
   '@tsdotnet/common-interfaces@1.0.6':
     resolution: {integrity: sha512-JHyYznerNMxZD2jl1aUmrguw3ge0PzqQf6PyYdw9jAoPGuzKRDYX7fX4OK7LDdLBU3yaUdY5WXEqbvX5IgVCJA==}
@@ -1777,7 +1777,7 @@ snapshots:
 
   '@sindresorhus/merge-streams@2.3.0': {}
 
-  '@tsdotnet/collection-base@2.1.8':
+  '@tsdotnet/collection-base@2.1.9':
     dependencies:
       '@tsdotnet/common-interfaces': 1.0.6
       '@tsdotnet/compare': 1.7.4
