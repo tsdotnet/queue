@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const QueueBase_1 = tslib_1.__importDefault(require("./QueueBase"));
+const QueueBase_js_1 = tslib_1.__importDefault(require("./QueueBase.js"));
 const MINIMUM_GROW = 4;
 const DEFAULT_CAPACITY = 4;
 const SHRINK_THRESHOLD = 42;
-class Queue extends QueueBase_1.default {
+class Queue extends QueueBase_js_1.default {
     constructor(initialEntries) {
         super();
         this._head = 0;

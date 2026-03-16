@@ -5,8 +5,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const QueueBase_1 = tslib_1.__importDefault(require("./QueueBase"));
-class LinkQueue extends QueueBase_1.default {
+const QueueBase_js_1 = tslib_1.__importDefault(require("./QueueBase.js"));
+class LinkQueue extends QueueBase_js_1.default {
     constructor(initialEntries) {
         super();
         this._root = {};

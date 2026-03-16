@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import LinkQueue from '../src/LinkQueue';
-import QueueClassic from '../src/Queue';
-import ShiftyQueue from '../archive/ShiftyQueue';
-import HybridQueue from '../archive/HybridQueue';
+import LinkQueue from '../src/LinkQueue.js';
+import QueueClassic from '../src/Queue.js';
+import ShiftyQueue from '../archive/ShiftyQueue.js';
+import HybridQueue from '../archive/HybridQueue.js';
 
 type QueueConstructor<T> = new <T>(initialValues?: T[]) => (LinkQueue<T> | QueueClassic<T> | ShiftyQueue<T> | HybridQueue<T>);
 

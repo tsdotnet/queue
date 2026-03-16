@@ -1,4 +1,4 @@
-﻿/*
+/*
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  * Based Upon: http://referencesource.microsoft.com/#System/CompMod/system/collections/generic/queue.cs
@@ -6,7 +6,7 @@
 
 /* eslint-disable @typescript-eslint/no-this-alias */
 
-import QueueBase from './QueueBase';
+import QueueBase from './QueueBase.js';
 
 const MINIMUM_GROW: number = 4;
 const DEFAULT_CAPACITY: number = 4;

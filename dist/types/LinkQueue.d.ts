@@ -2,7 +2,7 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import QueueBase from './QueueBase';
+import QueueBase from './QueueBase.js';
 export default class LinkQueue<T> extends QueueBase<T> {
     private _root;
     private _tail?;

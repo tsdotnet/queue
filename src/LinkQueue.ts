@@ -3,7 +3,7 @@
  * @license MIT
  */
 
-import QueueBase from './QueueBase';
+import QueueBase from './QueueBase.js';
 
 /**
  * A `LinkQueue<T>` will have different performance characteristics than a Queue using an array as its storage.

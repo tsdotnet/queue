@@ -1,4 +1,4 @@
-import QueueBase from './QueueBase';
+import QueueBase from './QueueBase.js';
 export default class Queue<T> extends QueueBase<T> {
     protected _array: T[];
     protected _head: number;
