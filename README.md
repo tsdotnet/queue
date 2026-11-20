@@ -1,4 +1,4 @@
-<a href="https://tsdotnet.github.io/queue/"><img src="https://cdn.jsdelivr.net/gh/tsdotnet/queue@master/assets/banner.svg" alt="@tsdotnet/queue: First in, first out. A plain queue with typed entries."></a>
+<a name="banner"><img src="https://cdn.jsdelivr.net/gh/tsdotnet/queue@master/assets/banner.svg" alt="@tsdotnet/queue: First in, first out. A plain queue with typed entries."></a>
 
 [![npm version](https://img.shields.io/npm/v/@tsdotnet/queue.svg?style=flat-square)](https://www.npmjs.com/package/@tsdotnet/queue)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/tsdotnet/queue/blob/master/LICENSE)
